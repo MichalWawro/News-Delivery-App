@@ -21,6 +21,8 @@ public class CityService {
             InputStreamReader reader = new InputStreamReader(inputStream);
             CSVReader csvReader = new CSVReader(reader);
 
+            csvReader.readNext();
+
             String[] line;
             while ((line = csvReader.readNext()) != null) {
                 String name = line[0];
