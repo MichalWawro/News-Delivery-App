@@ -1,19 +1,31 @@
+import React, {useEffect, useState} from 'react';
+import CityInput from './components/CityInput';
+
 import './App.css';
 
 function App() {
+  const [selectedCity, setSelectedCity] = useState(null);
 
-  fetch("http://localhost:8080/api/news")
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error("Error fetching data: ", error))
+  const handleCitySelect = (city) => {
+    setSelectedCity(city);
+    sendCityToBackend(city);
+  };
+
+  const sendCityToBackend = (city) => {
+    console.log('city sent to backend:', city);
+  };
 
   return (
     <div className="app-container">
       <header className="app-header">
-          <input className="input-field" placeholder="Select your location" />
+        <CityInput onCitySelect={handleCitySelect}/>
       </header>
       <div className="app">
-        <h1>Text</h1>
+        {selectedCity && (
+          <div>
+            <p>Currently selected city: {selectedCity.name}, {selectedCity.state}</p>
+          </div>
+        )}
       </div>
     </div>
   );
