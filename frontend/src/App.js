@@ -12,8 +12,19 @@ function App() {
   };
 
   const sendCityToBackend = (city) => {
-    console.log('city sent to backend:', city);
-  };
+    fetch('http://localhost:8080/api/select-city', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(city),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('City sent to backend:', data);
+    })
+    .catch(error => console.error('Error:', error));
+};
 
   return (
     <div className="app-container">
