@@ -8,10 +8,13 @@ function App() {
     .catch(error => console.error("Error fetching data: ", error))
 
   return (
-    <div className="App">
-      <header className="App-header">
-        
+    <div className="app-container">
+      <header className="app-header">
+          <input className="input-field" placeholder="Select your location" />
       </header>
+      <div className="app">
+        <h1>Text</h1>
+      </div>
     </div>
   );
 }
