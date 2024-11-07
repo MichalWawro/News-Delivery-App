@@ -8,8 +8,6 @@ public class NewsDeliveryAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NewsDeliveryAppApplication.class, args);
-		System.out.println("Hello, making sure this works");
-
 	}
 
 }
