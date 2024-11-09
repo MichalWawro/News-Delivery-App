@@ -7,10 +7,9 @@ function CityInput({onCitySelect}) {
     const [filteredCities, setFilteredCities] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/api/cities')
+        fetch('http://localhost:8080/api/get-cities')
             .then(response => response.json())
             .then(data => setCities(data))
-            .then(() => console.log(cities))
             .catch(error => console.error("Error fetching cities:", error));
     }, []);
 
