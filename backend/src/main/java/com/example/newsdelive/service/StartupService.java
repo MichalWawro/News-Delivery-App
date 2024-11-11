@@ -3,9 +3,11 @@ package com.example.newsdelive.service;
 import com.example.newsdelive.model.Article;
 import com.example.newsdelive.pipeline.ArticlePipeline;
 import com.example.newsdelive.repository.ArticleRepository;
-import jakarta.annotation.PostConstruct;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
+import jakarta.annotation.PostConstruct;
 
+import java.io.InputStream;
 import java.util.List;
 
 @Service
@@ -17,10 +19,18 @@ public class StartupService {
         this.pipeline = pipeline;
         this.repository = repository;
     }
+
     @PostConstruct
     public void init() {
-        List<Article> articles = pipeline.processArticles("C:/Users/Michał Wawro/Desktop/Projects/news-delivery-app/backend/src/main/resources/articles.csv");
-        articles.forEach(repository::save);
-        System.out.println("Articles have been processed and stored in memory.");
+        ClassPathResource resource = new ClassPathResource("articles.csv");
+
+        try (InputStream inputStream = resource.getInputStream()) {
+            List<Article> articles = pipeline.processArticles(inputStream);
+            articles.forEach(repository::save);
+            System.out.println("Articles have been processed and stored in memory.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.err.println("Failed to load or process articles.");
+        }
     }
 }

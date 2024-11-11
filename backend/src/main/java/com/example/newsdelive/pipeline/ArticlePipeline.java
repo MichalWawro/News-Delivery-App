@@ -5,6 +5,7 @@ import com.example.newsdelive.loader.ArticleLoader;
 import com.example.newsdelive.model.Article;
 import org.springframework.stereotype.Component;
 
+import java.io.InputStream;
 import java.util.List;
 
 @Component
@@ -12,8 +13,8 @@ public class ArticlePipeline {
     private final ArticleLoader loader = new ArticleLoader();
     private final ArticleClassifier classifier = new ArticleClassifier();
 
-    public List<Article> processArticles(String filePath) {
-        List<Article> articles = loader.loadArticlesFromCSV(filePath);
+    public List<Article> processArticles(InputStream inputStream) {
+        List<Article> articles = loader.loadArticlesFromCSV(inputStream);
 
         for (Article article : articles) {
             String classification = classifier.classifyArticle(article);
