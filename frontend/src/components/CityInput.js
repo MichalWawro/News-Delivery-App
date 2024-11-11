@@ -15,7 +15,6 @@ function CityInput({ cities, onCitySelect }) {
             const filtered = cities.filter(city =>
                 city.name.toLowerCase().includes(inputText.toLowerCase())
                 // ||
-                //Idk if I like searching by the state, might delete this later
                 // (city.state && city.state.toLowerCase().includes(inputText.toLowerCase()))
             );
             setFilteredCities(filtered);
