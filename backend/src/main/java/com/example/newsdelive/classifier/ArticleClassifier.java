@@ -18,6 +18,7 @@ public class ArticleClassifier {
         String prompt = "Classify this news article based on whether they are 'local' or 'global.'\n" +
                         " - A news article is considered **local** if it is from the United States and mentions a specific U.S. city. \n" +
                         " - A news article is considered **global** if it is from outside the United States, or if the article cannot be associated with a specific U.S. city.\n" +
+                        "Do not use abbreviations\n" +
                         "The output should look like this:\n" +
                         "Classification: Local/Global; " +
                         "Location: City, State or City\n" +
