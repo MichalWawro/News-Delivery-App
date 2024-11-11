@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './CityInput.css';
 
-function CityInput({onCitySelect}) {
+function CityInput({ onCitySelect }) {
     const [input, setInput] = useState('');
     const [cities, setCities] = useState([]);
     const [filteredCities, setFilteredCities] = useState([]);
@@ -19,9 +19,9 @@ function CityInput({onCitySelect}) {
     }
 
     const filterCities = (inputText) => {
-        if(inputText) {
-            const filtered = cities.filter(city => 
-                city.name.toLowerCase().includes(inputText.toLowerCase()) 
+        if (inputText) {
+            const filtered = cities.filter(city =>
+                city.name.toLowerCase().includes(inputText.toLowerCase())
                 // ||
                 //Idk if I like searching by the state, might delete this later
                 // (city.state && city.state.toLowerCase().includes(inputText.toLowerCase()))
@@ -40,10 +40,10 @@ function CityInput({onCitySelect}) {
 
     return (
         <div className='city-input'>
-            <input 
+            <input
                 className="input-field"
                 type="text"
-                placeholder="Search for a city" 
+                placeholder="Search for a city"
                 value={input}
                 onChange={handleInputChange}
             />

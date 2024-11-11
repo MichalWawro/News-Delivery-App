@@ -1,11 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './CurrentLocation.css';
 
-function CurrentLocation() {
+function CurrentLocation({selectedCity}) {
 
     return (
         <div className='current-location-box'>
-            <h1>Left box</h1>
+            {selectedCity ? (
+                <h1>{selectedCity.name}, {selectedCity.state}</h1>
+            ) : (
+                <h1>Select a Location</h1>
+            )}
         </div>
     );
 }

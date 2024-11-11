@@ -7,11 +7,27 @@ import './App.css';
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [showLocal, setShowLocal] = useState(true);
+
 
   useEffect(() => {
     document.title = 'News Delivery App';
-  }, [])
-  
+
+    //   const interval = setInterval(() => {
+    //     fetch('http://localhost:8080/api/ping')
+    //       .then(response => response.json())
+    //       .then(data => {
+    //         if (data.ready) {
+    //           setLoading(false);
+    //           clearInterval(interval);
+    //         }
+    //       })
+    //       .catch(error => console.error('Error:', error));
+    //   }, 10000);
+    //   return () => clearInterval(interval);
+  }, []);
+
   const handleCitySelect = (city) => {
     setSelectedCity(city);
     sendCityToBackend(city);
@@ -35,14 +51,31 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <CurrentLocation />
+        <CurrentLocation selectedCity={selectedCity} />
         <CityInput onCitySelect={handleCitySelect} />
-        <LocationSwitch />
+        <LocationSwitch setShowLocal={setShowLocal} />
       </header>
       <div className="app">
-        {selectedCity && (
+        {loading ? (
+          <div className='loading'>Loading...</div>
+        ) : (
           <div>
-            <div className='news-container'></div>
+            {selectedCity != null ? (
+              <div>
+                {showLocal ? (
+                  <div className='global-news-container'>
+                    Global
+                  </div>
+                ) : (
+                  <div className='local-news-container'>
+                    Local
+                  </div>
+
+                )}
+              </div>
+            ) : (
+              <div className='select-city-wait'>Choose you current location to see the local news!</div>
+            )}
           </div>
         )}
       </div>
