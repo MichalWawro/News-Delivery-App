@@ -7,7 +7,6 @@ import globalIcon from '../resources/global-icon.png'
 function LocationSwitch({ setShowLocal }) {
 
   const handleToggle = (event) => {
-    console.log("It tickles!")
     setShowLocal(event.target.checked);
   };
 

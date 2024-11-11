@@ -8,8 +8,11 @@
 }
 
 .switch-icon {
-    width: 24px;
-    height: 24px;
+    background-color: #AB886D;
+    border-radius: 15px;
+    padding: 2px;
+    width: 32px;
+    height: 32px;
 }
 
 .switch input {

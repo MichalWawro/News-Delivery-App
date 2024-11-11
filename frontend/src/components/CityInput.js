@@ -1,17 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './CityInput.css';
 
-function CityInput({ onCitySelect }) {
+function CityInput({ cities, onCitySelect }) {
     const [input, setInput] = useState('');
-    const [cities, setCities] = useState([]);
     const [filteredCities, setFilteredCities] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:8080/api/get-cities')
-            .then(response => response.json())
-            .then(data => setCities(data))
-            .catch(error => console.error("Error fetching cities:", error));
-    }, []);
 
     const handleInputChange = (e) => {
         setInput(e.target.value);

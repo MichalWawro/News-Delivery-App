@@ -1,14 +1,16 @@
 import React from 'react';
 import './CurrentLocation.css';
 
-function CurrentLocation({selectedCity}) {
+function CurrentLocation({ selectedCity }) {
 
     return (
-        <div className='current-location-box'>
+        <div>
             {selectedCity ? (
-                <h1>{selectedCity.name}, {selectedCity.state}</h1>
+                <div className='current-location-box'>
+                    <h1>{selectedCity.name}, {selectedCity.state}</h1>
+                </div>
             ) : (
-                <h1>Select a Location</h1>
+                <div></div>
             )}
         </div>
     );

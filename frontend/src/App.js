@@ -2,36 +2,45 @@ import React, { useEffect, useState } from 'react';
 import CityInput from './components/CityInput';
 import CurrentLocation from './components/CurrentLocation';
 import LocationSwitch from './components/LocationSwitch';
+import News from './components/News';
 
 import './App.css';
 
 function App() {
   const [selectedCity, setSelectedCity] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [showLocal, setShowLocal] = useState(true);
+  const [showLocal, setShowLocal] = useState(false);
+  const [articles, setArticles] = useState([]);
+  const [cities, setCities] = useState([]);
 
 
   useEffect(() => {
     document.title = 'News Delivery App';
 
-    //   const interval = setInterval(() => {
-    //     fetch('http://localhost:8080/api/ping')
-    //       .then(response => response.json())
-    //       .then(data => {
-    //         if (data.ready) {
-    //           setLoading(false);
-    //           clearInterval(interval);
-    //         }
-    //       })
-    //       .catch(error => console.error('Error:', error));
-    //   }, 10000);
-    //   return () => clearInterval(interval);
+    const checkArticles = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/check-for-articles');
+        const data = await response.json();
+        if (data.ready) {
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    checkArticles();
+    const interval = setInterval(checkArticles, 10000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  const handleCitySelect = (city) => {
-    setSelectedCity(city);
-    sendCityToBackend(city);
-  };
+  useEffect(() => {
+    fetch('http://localhost:8080/api/get-cities')
+      .then(response => response.json())
+      .then(data => setCities(data))
+      .catch(error => console.error("Error fetching cities:", error));
+  }, [setArticles]);
 
   const sendCityToBackend = (city) => {
     fetch('http://localhost:8080/api/get-articles', {
@@ -43,41 +52,30 @@ function App() {
     })
       .then(response => response.json())
       .then(data => {
+        setArticles(data);
         console.log('City sent to backend:', data);
       })
       .catch(error => console.error('Error:', error));
+  };
+
+  const handleCitySelect = (city) => {
+    setSelectedCity(city);
+    sendCityToBackend(city);
   };
 
   return (
     <div className="app-container">
       <header className="app-header">
         <CurrentLocation selectedCity={selectedCity} />
-        <CityInput onCitySelect={handleCitySelect} />
+        {cities.length > 0 ? (
+          <CityInput cities={cities} onCitySelect={handleCitySelect} />
+        ) : (
+          <div className='loading'>Fetching data, please wait...</div>
+        )}
         <LocationSwitch setShowLocal={setShowLocal} />
       </header>
       <div className="app">
-        {loading ? (
-          <div className='loading'>Loading...</div>
-        ) : (
-          <div>
-            {selectedCity != null ? (
-              <div>
-                {showLocal ? (
-                  <div className='global-news-container'>
-                    Global
-                  </div>
-                ) : (
-                  <div className='local-news-container'>
-                    Local
-                  </div>
-
-                )}
-              </div>
-            ) : (
-              <div className='select-city-wait'>Choose you current location to see the local news!</div>
-            )}
-          </div>
-        )}
+        <News loading={loading} selectedCity={selectedCity} showLocal={showLocal} articles={articles} />
       </div>
     </div>
   );
