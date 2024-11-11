@@ -1,30 +1,44 @@
-.city-input {
-  width: 25%;
-}
+/* .city-input { */
+  /* width: 25%; */
+/* } */
 
 .input-field {
-    position:absolute;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
     width: 25%;
     top: 2.5vh;
-    background: transparent;
-    outline: 0;
+
+    background-color: #AB886D;
+    border-radius: 15px;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
     padding: 7px 0;
   
+    text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.3rem;
-    color: #fff;
+    color: #D6C0B3;
   }
 
   .dropdown-list {
     position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+
     top: 7.5vh;
     width: 25%;
-    background-color: #9b9b9b;
+    background-color: #AB886D;
     padding: 0;
     margin: 0;
+    border-radius: 20px;
+    
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #D6C0B3;
+
     max-height: 250px;
     overflow-y: auto;
 }

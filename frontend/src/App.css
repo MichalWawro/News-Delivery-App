@@ -1,28 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .app-header {
-  background-color: #223e75;
+  background-color: #493628;
   height: 10vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  padding: 0 5%;
+  /* flex-direction: column; */
 }
 
 .app {
-  background-color: #67abd8;
-  display: flex;
+  background-color: #D6C0B3;
+  /* display: flex; */
   height: calc(90vh);
 
   align-items: center;
   flex-direction: column;
-}
-
-.app h1 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
 }
 
