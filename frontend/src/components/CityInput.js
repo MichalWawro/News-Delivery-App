@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './CityInput.css';
 
 function CityInput({ cities, onCitySelect }) {
@@ -41,9 +41,9 @@ function CityInput({ cities, onCitySelect }) {
             />
             {filteredCities.length > 0 && (
                 <ul className="dropdown-list">
-                    {filteredCities.map((city, index) => (
+                    {filteredCities.map((city) => (
                         <li
-                            key={"index"}
+                            key={`${city.name}-${city.state}`}
                             onClick={() => handleCitySelect(city)}
                         >
                             {city.name}, {city.state}
@@ -55,4 +55,4 @@ function CityInput({ cities, onCitySelect }) {
     )
 }
 
-export default CityInput
+export default CityInput;

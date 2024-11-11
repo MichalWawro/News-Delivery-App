@@ -26,11 +26,14 @@ function App() {
         }
       } catch (error) {
         console.error('Error:', error);
+        setTimeout(() => {
+          window.location.reload();
+        }, 15000);
       }
     };
 
     checkArticles();
-    const interval = setInterval(checkArticles, 10000);
+    const interval = setInterval(checkArticles, 15000);
 
     return () => clearInterval(interval);
   }, []);
