@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class ArticleClassifier {
     private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-    private final String OPENAI_API_KEY = "API_KEY";
+    private final String OPENAI_API_KEY = "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";
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper objectMapper = new ObjectMapper();
