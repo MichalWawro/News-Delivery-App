@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="API_KEY Commit for EC2 Server">
+    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="EC2 Server ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/classifier/ArticleClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/classifier/ArticleClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <workItem from="1731395935826" duration="1475000" />
       <workItem from="1731397471762" duration="113000" />
       <workItem from="1731397599948" duration="294000" />
-      <workItem from="1731440742498" duration="4529000" />
+      <workItem from="1731440742498" duration="6953000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -123,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731447401710</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="EC2 Server ready">
+      <option name="closed" value="true" />
+      <created>1731449739853</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731449739853</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +141,7 @@
     <MESSAGE value="Changes in the structure of the project" />
     <MESSAGE value="Naming changes" />
     <MESSAGE value="API_KEY Commit for EC2 Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="API_KEY Commit for EC2 Server" />
+    <MESSAGE value="EC2 Server ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="EC2 Server ready" />
   </component>
 </project>
