@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/newsdelive/NewsDeliveryAppApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/newsdelive/classifier/ArticleClassifier.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/newsdelive/config/WebConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/newsdelive/controller/ArticleController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/newsdelive/controller/CityController.java" beforeDir="false" />
@@ -119,6 +118,15 @@
       <workItem from="1731395737580" duration="192000" />
       <workItem from="1731395935826" duration="1475000" />
       <workItem from="1731397471762" duration="113000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1731397599948" duration="294000" />
+<<<<<<< HEAD
+      <workItem from="1731440742498" duration="3102000" />
+=======
+      <workItem from="1731440742498" duration="6953000" />
+>>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+>>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -128,7 +136,39 @@
       <option name="project" value="LOCAL" />
       <updated>1731397257740</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="2" />
+=======
+    <task id="LOCAL-00002" summary="Naming changes">
+      <option name="closed" value="true" />
+      <created>1731397885469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731397885469</updated>
+    </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="3" />
+=======
+    <task id="LOCAL-00003" summary="API_KEY Commit for EC2 Server">
+      <option name="closed" value="true" />
+      <created>1731447401710</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731447401710</updated>
+    </task>
+    <task id="LOCAL-00004" summary="EC2 Server ready">
+      <option name="closed" value="true" />
+      <created>1731449739853</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731449739853</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+>>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+>>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +176,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes in the structure of the project" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="Changes in the structure of the project" />
+=======
+    <MESSAGE value="Naming changes" />
+<<<<<<< HEAD
+    <option name="LAST_COMMIT_MESSAGE" value="Naming changes" />
+=======
+    <MESSAGE value="API_KEY Commit for EC2 Server" />
+    <MESSAGE value="EC2 Server ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="EC2 Server ready" />
+>>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+>>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
   </component>
 </project>
