@@ -1,0 +1,27 @@
+.current-location-box {
+    position: absolute;
+    top: 2.5vh;
+    left: 3%;
+
+    min-width: 20%;
+    max-width: 30%;
+    height: 39px;
+    padding-inline: 10px;
+
+    background-color: #AB886D;
+    border-radius: 15px;
+    border: 0;
+    outline: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-location-box h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #D6C0B3;
+}
