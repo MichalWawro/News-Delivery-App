@@ -29,10 +29,11 @@ function App() {
       }
     };
 
-    checkArticles();
-    const interval = setInterval(checkArticles, 15000);
+    fetchCticies();
+    // checkArticles();
+    // const interval = setInterval(checkArticles, 15000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   const fetchCticies = () => {
