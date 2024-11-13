@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="Testing CORS on all origins allowed">
+    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="CORS related bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/NewsDeliveryAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/classifier/ArticleClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/classifier/ArticleClassifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/CityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/loader/ArticleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/loader/ArticleLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/model/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/model/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/model/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/pipeline/ArticlePipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/pipeline/ArticlePipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/service/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdelive/service/StartupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/example/newsdelive/NewsDeliveryAppApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/com/example/newsdeliveryapp/NewsDeliveryAppApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +100,7 @@
       <workItem from="1731397471762" duration="113000" />
       <workItem from="1731397599948" duration="294000" />
       <workItem from="1731440742498" duration="8432000" />
-      <workItem from="1731455482446" duration="586000" />
+      <workItem from="1731455482446" duration="1596000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -161,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731454737955</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="CORS related bug fixes">
+      <option name="closed" value="true" />
+      <created>1731456212677</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731456212677</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +171,7 @@
     <MESSAGE value="EC2 Server ready" />
     <MESSAGE value="Added my EC2 public IP to CORS .allowedOrigins" />
     <MESSAGE value="Testing CORS on all origins allowed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing CORS on all origins allowed" />
+    <MESSAGE value="CORS related bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="CORS related bug fixes" />
   </component>
 </project>

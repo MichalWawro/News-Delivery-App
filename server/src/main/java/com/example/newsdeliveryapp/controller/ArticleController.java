@@ -32,7 +32,7 @@ public class ArticleController {
     }
 
     @GetMapping("/check-for-articles")
-    @CrossOrigin(origins = "http://98.85.16.27:3000")
+//    @CrossOrigin(origins = "http://98.85.16.27:3000")
     public Map<String, Boolean> checkForArticles() {
         boolean hasArticles = repository.getAllArticles().size() > 0;
         return Collections.singletonMap("ready", hasArticles);

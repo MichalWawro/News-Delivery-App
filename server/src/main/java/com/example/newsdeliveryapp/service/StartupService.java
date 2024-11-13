@@ -27,7 +27,7 @@ public class StartupService {
         try (InputStream inputStream = resource.getInputStream()) {
             List<Article> articles = pipeline.processArticles(inputStream);
             articles.forEach(repository::save);
-            System.out.println("Articles have been processed and stored in memory.");
+            System.out.println("Articles have been classified and stored in memory.");
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println("Failed to load or process articles.");
