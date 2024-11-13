@@ -3,6 +3,7 @@ import CityInput from './components/CityInput';
 import CurrentLocation from './components/CurrentLocation';
 import LocationSwitch from './components/LocationSwitch';
 import News from './components/News';
+import TestCorsComponent from './components/TestCorsComponent';
 
 import './App.css';
 
@@ -16,20 +17,6 @@ function App() {
   useEffect(() => {
     document.title = 'News Delivery App';
 
-
-    fetch('http://98.85.16.27:8080/api/test-cors')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then((data) => {
-        setCorsResponse(data); // Update state with response data
-      })
-      .catch((error) => {
-        setError(error.message); // Catch and set any errors
-      });
     // const checkArticles = async () => {
     //   try {
     //     // const response = await fetch('http://localhost:8080/api/check-for-articles');
@@ -92,6 +79,9 @@ function App() {
         <LocationSwitch setShowLocal={setShowLocal} />
       </header>
       <div className="app">
+      <div>
+        <TestCorsComponent/>
+      </div>
         {
           cities.length > 0 ? (
             <News selectedCity={selectedCity} showLocal={showLocal} articles={articles} />
