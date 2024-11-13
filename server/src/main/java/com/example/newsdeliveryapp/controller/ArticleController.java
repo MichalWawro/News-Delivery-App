@@ -38,10 +38,4 @@ public class ArticleController {
         boolean hasArticles = repository.getAllArticles().size() > 0;
         return Collections.singletonMap("ready", hasArticles);
     }
-
-    @GetMapping("/test-cors")
-    @CrossOrigin(origins = "http://98.85.16.27:3000")
-    public String testCors() {
-        return "CORS is working!";
-    }
 }

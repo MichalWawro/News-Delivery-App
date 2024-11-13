@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="CORS update.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TestCorsComponent.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
       <workItem from="1731397471762" duration="113000" />
       <workItem from="1731397599948" duration="294000" />
       <workItem from="1731440742498" duration="8432000" />
-      <workItem from="1731455482446" duration="4758000" />
+      <workItem from="1731455482446" duration="5667000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -175,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731459236585</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731460717608</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731460717608</updated>
+    </task>
+    <task id="LOCAL-00011" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731460733244</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731460733244</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -3,7 +3,6 @@ import CityInput from './components/CityInput';
 import CurrentLocation from './components/CurrentLocation';
 import LocationSwitch from './components/LocationSwitch';
 import News from './components/News';
-import TestCorsComponent from './components/TestCorsComponent';
 
 import './App.css';
 
@@ -17,24 +16,23 @@ function App() {
   useEffect(() => {
     document.title = 'News Delivery App';
 
-    // const checkArticles = async () => {
-    //   try {
-    //     // const response = await fetch('http://localhost:8080/api/check-for-articles');
-    //     const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
-    //     const data = await response.json();
-    //     if (data.ready) {
-    //       fetchCticies();
-    //     }
-    //   } catch (error) {
-    //     console.error('Error:', error);
-    //   }
-    // };
+    const checkArticles = async () => {
+      try {
+        // const response = await fetch('http://localhost:8080/api/check-for-articles');
+        const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
+        const data = await response.json();
+        if (data.ready) {
+          fetchCticies();
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
 
-    // fetchCticies();
-    // checkArticles();
-    // const interval = setInterval(checkArticles, 15000);
+    checkArticles();
+    const interval = setInterval(checkArticles, 15000);
 
-    // return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, []);
 
   const fetchCticies = () => {
@@ -79,9 +77,6 @@ function App() {
         <LocationSwitch setShowLocal={setShowLocal} />
       </header>
       <div className="app">
-      <div>
-        <TestCorsComponent/>
-      </div>
         {
           cities.length > 0 ? (
             <News selectedCity={selectedCity} showLocal={showLocal} articles={articles} />
