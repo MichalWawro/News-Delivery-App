@@ -9,9 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class ArticleClassifier {
     private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-    private final String KEY1 = "sk-proj-k32zMBoCd04CCxkAi7Gu4A_KzB_dBOS7jGaw4dM5U_gDVlSdJwLbXzb0zx7WKuVG-Hsx3o9J-";
-    private final String KEY2 = "nT3BlbkFJo01_O2lI4GjJ1SXwG72JzzAnvC2Gn8HSz45OlZkSfdTxh70y4d3GlgQyk6Ti8rBE8TABYeXLwA";
-    private final String OPENAI_API_KEY = KEY1 + KEY2;
+    private final String OPENAI_API_KEY = "";
 
 
     private final RestTemplate restTemplate = new RestTemplate();
