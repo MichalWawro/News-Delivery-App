@@ -1,4 +1,4 @@
-package com.example.newsdelive.model;
+package com.example.newsdeliveryapp.model;
 
 public class Article {
     private String title;

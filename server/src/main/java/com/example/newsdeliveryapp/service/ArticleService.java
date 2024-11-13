@@ -1,8 +1,8 @@
-package com.example.newsdelive.service;
+package com.example.newsdeliveryapp.service;
 
-import com.example.newsdelive.model.Article;
-import com.example.newsdelive.model.City;
-import com.example.newsdelive.repository.ArticleRepository;
+import com.example.newsdeliveryapp.model.Article;
+import com.example.newsdeliveryapp.model.City;
+import com.example.newsdeliveryapp.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

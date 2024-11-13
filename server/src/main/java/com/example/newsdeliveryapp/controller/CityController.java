@@ -1,7 +1,7 @@
-package com.example.newsdelive.controller;
+package com.example.newsdeliveryapp.controller;
 
-import com.example.newsdelive.model.City;
-import com.example.newsdelive.service.CityService;
+import com.example.newsdeliveryapp.model.City;
+import com.example.newsdeliveryapp.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
-package com.example.newsdelive.service;
+package com.example.newsdeliveryapp.service;
 
-import com.example.newsdelive.model.City;
+import com.example.newsdeliveryapp.model.City;
 import com.opencsv.CSVReader;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
