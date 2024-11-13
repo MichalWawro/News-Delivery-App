@@ -16,20 +16,34 @@ function App() {
   useEffect(() => {
     document.title = 'News Delivery App';
 
-    const checkArticles = async () => {
-      try {
-        // const response = await fetch('http://localhost:8080/api/check-for-articles');
-        const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
-        const data = await response.json();
-        if (data.ready) {
-          fetchCticies();
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
 
-    fetchCticies();
+    fetch('http://98.85.16.27:8080/api/test-cors')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then((data) => {
+        setCorsResponse(data); // Update state with response data
+      })
+      .catch((error) => {
+        setError(error.message); // Catch and set any errors
+      });
+    // const checkArticles = async () => {
+    //   try {
+    //     // const response = await fetch('http://localhost:8080/api/check-for-articles');
+    //     const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
+    //     const data = await response.json();
+    //     if (data.ready) {
+    //       fetchCticies();
+    //     }
+    //   } catch (error) {
+    //     console.error('Error:', error);
+    //   }
+    // };
+
+    // fetchCticies();
     // checkArticles();
     // const interval = setInterval(checkArticles, 15000);
 
