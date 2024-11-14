@@ -38,17 +38,6 @@ function App() {
     return () => clearInterval(checkInterval);
   }, []);
 
-<<<<<<< HEAD
-  // useEffect(() => {
-  //   fetch('http://localhost:8080/api/get-cities')
-  //     .then(response => response.json())
-  //     .then(data => setCities(data))
-  //     .catch(error => console.error("Error fetching cities:", error));
-  // }, [setArticles]);
-
-  const fetchCticies = () => {
-    fetch('http://localhost:8080/api/get-cities')
-=======
   useEffect(() => {
     const interval = setInterval(() => {
         setDots((prevDots) => {
@@ -66,7 +55,6 @@ function App() {
   const fetchCticies = () => {
     fetch('http://localhost:8080/api/get-cities')
     // fetch('http://98.85.16.27:8080/api/get-cities')
->>>>>>> 2aef4603 (Added filter bar with some categories, added categories to articles, added animated 'loading' text)
       .then(response => response.json())
       .then(data => setCities(data))
       .catch(error => console.error("Error fetching cities:", error));
@@ -74,10 +62,7 @@ function App() {
 
   const sendCityToBackend = (city) => {
     fetch('http://localhost:8080/api/get-articles', {
-<<<<<<< HEAD
-=======
     // fetch('http://98.85.16.27:8080/api/get-articles', {
->>>>>>> 2aef4603 (Added filter bar with some categories, added categories to articles, added animated 'loading' text)
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
