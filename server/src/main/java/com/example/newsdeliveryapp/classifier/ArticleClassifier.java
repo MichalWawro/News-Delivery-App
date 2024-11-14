@@ -7,22 +7,27 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.sql.SQLOutput;
+
 public class ArticleClassifier {
     private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-    private final String OPENAI_API_KEY = "";
+    private final String OPENAI_API_KEY = "API_KEY";
 
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     public String classifyArticle(Article article) {
-        String prompt = "Classify this news article based on whether they are 'local' or 'global.'\n" +
+        String prompt = "Classify this news article based on whether they are 'local' or 'global' and assign a category to the article.\n" +
                         " - A news article is considered **local** if it is from the United States and mentions a specific U.S. city. \n" +
                         " - A news article is considered **global** if it is from outside the United States, or if the article cannot be associated with a specific U.S. city.\n" +
+                        " - Use only one these categories: News, Lifestyle, Health, Sport, Food, Science, Business, Entertainment, Other.\n" +
+                        " - If it is not possible or hard to assign a certain category, leave 'other' as a category.\n" +
                         "Do not use abbreviations\n" +
                         "The output should look like this:\n" +
                         "Classification: Local/Global; " +
-                        "Location: City, State or City\n" +
+                        "Location: City, State or City; " +
+                        "Category: Category" +
                         "\nHere's the article I want you to classify:\n" +
                         "Title of the article: " + article.getTitle() + "\n" +
                         "Content of the article: " + article.getContent();
@@ -60,8 +65,9 @@ public class ArticleClassifier {
             String[] parts = classificationText.split(";");
             String classification = parts[0].replace("Classification: ", "").trim();
             String location = parts[1].replace("Location: ", "").trim();
+            String category = parts[2].replace("Category: ", "").trim();
 
-            return  classification+ ";" + location;
+            return  classification + ";" + location + ";" + category;
         } catch (Exception e) {
             e.printStackTrace();
             return "error";

@@ -23,13 +23,16 @@ public class ArticlePipeline {
 
             if(parts[0].equals("Local")) {
                 article.setLocation("Local");
-                if(parts[1].contains(", ")) {
-                    article.setCity(parts[1].split(", ")[0]);
-                    article.setState(parts[1].split(", ")[1]);
-                }
             } else {
                 article.setLocation("Global");
             }
+
+            if(parts[1].contains(", ")) {
+                article.setCity(parts[1].split(", ")[0]);
+                article.setState(parts[1].split(", ")[1]);
+            }
+
+            article.setCategory(parts[2]);
         }
         return articles;
     }

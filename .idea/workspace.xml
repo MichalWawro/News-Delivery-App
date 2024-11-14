@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="CORS update.">
+    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="Deleted API_KEY from the code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/NewsDeliveryAppApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/classifier/ArticleClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/classifier/ArticleClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/loader/ArticleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/loader/ArticleLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/model/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/model/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/pipeline/ArticlePipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/pipeline/ArticlePipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +109,11 @@
       <workItem from="1731397599948" duration="294000" />
       <workItem from="1731440742498" duration="8432000" />
       <workItem from="1731455482446" duration="6592000" />
-      <workItem from="1731511199812" duration="50000" />
+      <workItem from="1731511199812" duration="747000" />
+      <workItem from="1731589887619" duration="5112000" />
+      <workItem from="1731614528746" duration="178000" />
+      <workItem from="1731614716244" duration="287000" />
+      <workItem from="1731615119712" duration="2038000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -197,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731462537514</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Deleted API_KEY from the code">
+      <option name="closed" value="true" />
+      <created>1731511300354</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731511300354</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +234,7 @@
     <MESSAGE value="Testing CORS on all origins allowed" />
     <MESSAGE value="CORS related bug fixes" />
     <MESSAGE value="CORS update." />
-    <option name="LAST_COMMIT_MESSAGE" value="CORS update." />
+    <MESSAGE value="Deleted API_KEY from the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted API_KEY from the code" />
   </component>
 </project>

@@ -25,7 +25,7 @@ public class ArticleLoader {
                 if (line.length >= 2) {
                     String title = line[0].replace("�", "'");
                     String content = line[1].replace("�", "'");
-                    articles.add(new Article(title, content, null, null, null));
+                    articles.add(new Article(title, content, null, null, null, null));
                 } else {
                     System.out.println("Skipping malformed line: " + Arrays.toString(line));
                 }

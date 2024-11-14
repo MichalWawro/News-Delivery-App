@@ -18,7 +18,7 @@ public class CityController {
     }
 
     @GetMapping("/get-cities")
-    @CrossOrigin(origins = "http://98.85.16.27:3000")
+    @CrossOrigin(origins = {"http://localhost:3000", "http://98.85.16.27:3000"})
     public List<City> getAllCities() {
         return cityService.getAllCities();
     }

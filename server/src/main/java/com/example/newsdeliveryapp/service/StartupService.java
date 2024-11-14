@@ -22,7 +22,7 @@ public class StartupService {
 
     @PostConstruct
     public void init() {
-        ClassPathResource resource = new ClassPathResource("articles.csv");
+        ClassPathResource resource = new ClassPathResource("articles-test.csv");
 
         try (InputStream inputStream = resource.getInputStream()) {
             List<Article> articles = pipeline.processArticles(inputStream);
