@@ -21,8 +21,6 @@ function News({ loading, selectedCity, showLocal, articles, category }) {
             }
         });
 
-        console.log(category);
-
         if(category) {
             global = global.filter(article => article.category === category);
             local = local.filter(article => article.category === category);

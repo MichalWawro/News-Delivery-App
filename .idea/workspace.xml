@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost">
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Categories.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Categories.css" afterDir="false" />
+    <list default="true" id="2304a8e0-8f36-45c7-bbf4-0283a0902209" name="Changes" comment="API Key for EC2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/News.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/classifier/ArticleClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/classifier/ArticleClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/example/newsdeliveryapp/service/StartupService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +105,7 @@
       <workItem from="1731589887619" duration="5112000" />
       <workItem from="1731614528746" duration="178000" />
       <workItem from="1731614716244" duration="287000" />
-      <workItem from="1731615119712" duration="2436000" />
+      <workItem from="1731615119712" duration="3287000" />
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -217,7 +219,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731626754269</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="API Key for EC2">
+      <option name="closed" value="true" />
+      <created>1731627111845</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627111845</updated>
+    </task>
+    <task id="LOCAL-00016" summary="API Key for EC2">
+      <option name="closed" value="true" />
+      <created>1731627156759</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627156759</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +252,7 @@
     <MESSAGE value="CORS update." />
     <MESSAGE value="Deleted API_KEY from the code" />
     <MESSAGE value="Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost" />
+    <MESSAGE value="API Key for EC2" />
+    <option name="LAST_COMMIT_MESSAGE" value="API Key for EC2" />
   </component>
 </project>
