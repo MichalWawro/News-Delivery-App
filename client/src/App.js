@@ -3,6 +3,7 @@ import CityInput from './components/CityInput';
 import CurrentLocation from './components/CurrentLocation';
 import LocationSwitch from './components/LocationSwitch';
 import News from './components/News';
+import Categories from './components/Categories';
 
 import './App.css';
 
@@ -11,6 +12,8 @@ function App() {
   const [showLocal, setShowLocal] = useState(false);
   const [articles, setArticles] = useState([]);
   const [cities, setCities] = useState([]);
+  const [category, setCategory] = useState(null);
+  const [dots, setDots] = useState("");
 
 
   useEffect(() => {
@@ -19,6 +22,7 @@ function App() {
     const checkArticles = async () => {
       try {
         const response = await fetch('http://localhost:8080/api/check-for-articles');
+        // const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
         const data = await response.json();
         if (data.ready) {
           fetchCticies();
@@ -29,11 +33,12 @@ function App() {
     };
 
     checkArticles();
-    const interval = setInterval(checkArticles, 15000);
+    const checkInterval = setInterval(checkArticles, 15000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(checkInterval);
   }, []);
 
+<<<<<<< HEAD
   // useEffect(() => {
   //   fetch('http://localhost:8080/api/get-cities')
   //     .then(response => response.json())
@@ -43,6 +48,25 @@ function App() {
 
   const fetchCticies = () => {
     fetch('http://localhost:8080/api/get-cities')
+=======
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setDots((prevDots) => {
+            if (prevDots.length < 3) {
+                return prevDots + ".";
+            } else {
+                return "";
+            }
+        });
+    }, 500);
+
+    return () => clearInterval(interval);
+}, []);
+
+  const fetchCticies = () => {
+    fetch('http://localhost:8080/api/get-cities')
+    // fetch('http://98.85.16.27:8080/api/get-cities')
+>>>>>>> 2aef4603 (Added filter bar with some categories, added categories to articles, added animated 'loading' text)
       .then(response => response.json())
       .then(data => setCities(data))
       .catch(error => console.error("Error fetching cities:", error));
@@ -50,6 +74,10 @@ function App() {
 
   const sendCityToBackend = (city) => {
     fetch('http://localhost:8080/api/get-articles', {
+<<<<<<< HEAD
+=======
+    // fetch('http://98.85.16.27:8080/api/get-articles', {
+>>>>>>> 2aef4603 (Added filter bar with some categories, added categories to articles, added animated 'loading' text)
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -81,13 +109,13 @@ function App() {
         <LocationSwitch setShowLocal={setShowLocal} />
       </header>
       <div className="app">
+        <Categories category={category} setCategory={setCategory}/>
         {
           cities.length > 0 ? (
-            <News selectedCity={selectedCity} showLocal={showLocal} articles={articles} />
+            <News selectedCity={selectedCity} showLocal={showLocal} articles={articles} category={category} />
           ) : (
             <div>
-              <div className='loading-app'>Processing the articles...</div>
-              <div className='loading-app'>...This might take up to two minutes, please wait.</div>
+              <div className='loading-app'>Loading articles{dots}</div>
             </div>
           )
         }
