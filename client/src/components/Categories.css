@@ -1,0 +1,43 @@
+.categoriesBar {
+    display: flex;
+    background-color: #AB886D;
+    height: 5vh;
+
+    /* position: relative; */
+    /* top: 0; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30%;
+    /* z-index: 100; */
+
+}
+
+.categoryButton {
+    /* width: 5vw; */
+    flex: 1;
+    background: transparent;
+
+    border: none;
+    border-left: 3px solid #493628;
+    padding: 10px;
+    cursor: pointer;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #493628;
+}
+
+.categoryButton:hover {
+    text-decoration: underline;
+}
+
+.categoryButton:last-child {
+    border-right: 3px solid #493628;
+}
+
+.categoryButton.active {
+    background-color: #493628;
+
+    color: #D6C0B3;
+
+}

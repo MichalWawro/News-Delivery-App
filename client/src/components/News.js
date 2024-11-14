@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import './News.css';
 
-function News({ loading, selectedCity, showLocal, articles }) {
+function News({ loading, selectedCity, showLocal, articles, category }) {
     const [globalArticles, setGlobalArticles] = useState([]);
     const [localArticles, setLocalArticles] = useState([]);
     const [stateArticles, setStateArticles] = useState([]);
 
-    const categorizeArticles = () => {
-        const global = [];
-        const local = [];
-        const state = [];
+    const processArticles = () => {
+        let global = [];
+        let local = [];
+        let state = [];
 
         articles.forEach(article => {
             if (article.location === "Global") {
@@ -21,14 +21,21 @@ function News({ loading, selectedCity, showLocal, articles }) {
             }
         });
 
+        console.log(category);
+
+        if(category) {
+            global = global.filter(article => article.category === category);
+            local = local.filter(article => article.category === category);
+            state = state.filter(article => article.category === category);
+        }
         setGlobalArticles(global);
         setLocalArticles(local);
         setStateArticles(state);
     };
 
     useEffect(() => {
-        categorizeArticles();
-    }, [articles, selectedCity]);
+        processArticles();
+    }, [articles, selectedCity, category]);
 
     return (
         <div>
@@ -48,6 +55,7 @@ function News({ loading, selectedCity, showLocal, articles }) {
                                             <div key={index} className="article">
                                                 <h3>{article.title}</h3>
                                                 <p>{article.content}</p>
+                                                <p>{article.category}</p>
                                             </div>
                                         ))
                                     ) : (
@@ -62,6 +70,7 @@ function News({ loading, selectedCity, showLocal, articles }) {
                                             <div key={index} className="article">
                                                 <h3>{article.title}</h3>
                                                 <p>{article.content}</p>
+                                                <p>{article.category}</p>
                                             </div>
                                         ))
                                     ) : (
@@ -75,6 +84,7 @@ function News({ loading, selectedCity, showLocal, articles }) {
                                                 <div key={index} className="article">
                                                     <h3>{article.title}</h3>
                                                     <p>{article.content}</p>
+                                                    <p>{article.category}</p>
                                                 </div>
                                             ))}
                                         </div>
