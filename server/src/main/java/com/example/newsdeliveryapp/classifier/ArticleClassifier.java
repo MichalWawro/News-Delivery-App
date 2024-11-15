@@ -11,7 +11,7 @@ import java.sql.SQLOutput;
 
 public class ArticleClassifier {
     private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-    private final String OPENAI_API_KEY = "sk-proj-sJj58_WAPt6VHapZJINz8fO7JjRITfILkITLCaSDDetgWrdLCujM3lgXj2jH" + "enAjdJkIhZ-YhKT3BlbkFJKbMi1CHN1neTdS6POO_jCkWGSndN5grU5GL9nZ-y6Ji5eoI9x_eFiH4P-SxAOnDjnYqU0TqGcA";
+    private final String OPENAI_API_KEY = "API_KEY";
 
 
     private final RestTemplate restTemplate = new RestTemplate();
