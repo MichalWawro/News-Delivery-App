@@ -12,12 +12,12 @@
   z-index: 100;
 }
 
-.app {
+.app-container {
   background-color: #D6C0B3;
   min-height: 90vh;
   height: auto;
-  align-items: center;
-  flex-direction: column;
+  /* align-items: center; */
+  /* flex-direction: column; */
 }
 
 .loading-app {
@@ -27,11 +27,4 @@
   font-size: 2rem;
   color: #AB886D;
   text-align: center;
-}
-
-.local-news-container,
-.global-news-container {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 2rem;
 }

@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import './News.css';
 
-function News({ loading, selectedCity, showLocal, articles, category }) {
+function News({ selectedCity, showLocal, articles, category }) {
     const [globalArticles, setGlobalArticles] = useState([]);
     const [localArticles, setLocalArticles] = useState([]);
     const [stateArticles, setStateArticles] = useState([]);
+
+    useEffect(() => {
+        processArticles();
+    }, [selectedCity, articles, category]);
 
     const processArticles = () => {
         let global = [];
@@ -21,9 +25,13 @@ function News({ loading, selectedCity, showLocal, articles, category }) {
             }
         });
 
+<<<<<<< HEAD
         console.log(category);
 
         if(category) {
+=======
+        if (category) {
+>>>>>>> e901481f (Changed the layout of the articles, added article randomizer for more article diversity, added more categories.)
             global = global.filter(article => article.category === category);
             local = local.filter(article => article.category === category);
             state = state.filter(article => article.category === category);
@@ -33,72 +41,80 @@ function News({ loading, selectedCity, showLocal, articles, category }) {
         setStateArticles(state);
     };
 
-    useEffect(() => {
-        processArticles();
-    }, [articles, selectedCity, category]);
+    const getRandomArticlesByCategory = (articles, count) => {
+        const categoryMap = articles.reduce((acc, article) => {
+            if (!acc[article.category]) acc[article.category] = [];
+            acc[article.category].push(article);
+            return acc;
+        }, {});
+
+        let selectedArticles = [];
+        Object.values(categoryMap).forEach(group => {
+            const shuffled = [...group].sort(() => Math.random() - 0.5);
+            selectedArticles = selectedArticles.concat(shuffled.slice(0, Math.min(count, group.length)));
+        });
+
+        return selectedArticles.sort(() => Math.random() - 0.5).slice(0, count);
+    };
+
+    const randomLocalArticles = useMemo(() => getRandomArticlesByCategory(localArticles, 5), [localArticles, category]);
+    const randomStateArticles = useMemo(() => getRandomArticlesByCategory(stateArticles, 5), [stateArticles, category]);
+    const randomGlobalArticles = useMemo(() => getRandomArticlesByCategory(globalArticles, 5), [globalArticles, category]);
 
     return (
         <div>
-            {loading ? (
-                <div className='loading'>
-                    Loading...
-                </div>
-            ) : (
-                <div>
-                    {selectedCity != null ? (
-                        <div>
-                            {showLocal ? (
-                                <div className='global-news-container'>
-                                    <h2>Global News</h2>
-                                    {globalArticles.length ? (
-                                        globalArticles.map((article, index) => (
-                                            <div key={index} className="article">
-                                                <h3>{article.title}</h3>
-                                                <p>{article.content}</p>
-                                                <p>{article.category}</p>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <p>No global articles available.</p>
-                                    )}
-                                </div>
+            {selectedCity != null ? (
+                <div className="news-container">
+                    <div className="us-news-container">
+                        <div className='local-news-container'>
+                            <h2>Local News</h2>
+                            {localArticles.length ? (
+                                randomLocalArticles.map((article, index) => (
+                                    <div key={index} className="article">
+                                        <h3>{article.title}</h3>
+                                        <p>{article.content}</p>
+                                        <p>{article.category}</p>
+                                    </div>
+                                ))
                             ) : (
-                                <div className='local-news-container'>
-                                    <h2>Local News</h2>
-                                    {localArticles.length ? (
-                                        localArticles.map((article, index) => (
-                                            <div key={index} className="article">
-                                                <h3>{article.title}</h3>
-                                                <p>{article.content}</p>
-                                                <p>{article.category}</p>
-                                            </div>
-                                        ))
-                                    ) : (
-                                        <p>No local articles from this city available.</p>
-                                    )}
-
-                                    {stateArticles.length > 0 && (
-                                        <div className="state-news-container">
-                                            <h2>State News</h2>
-                                            {stateArticles.map((article, index) => (
-                                                <div key={index} className="article">
-                                                    <h3>{article.title}</h3>
-                                                    <p>{article.content}</p>
-                                                    <p>{article.category}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
+                                <p>No local articles from this city available.</p>
                             )}
                         </div>
-                    ) : (
-                        <div></div>
-                    )}
+                        <div className="state-news-container">
+                            <h2>State News</h2>
+                            {stateArticles.length ? (
+                                randomStateArticles.map((article, index) => (
+                                    <div key={index} className="article">
+                                        <h3>{article.title}</h3>
+                                        <p>{article.content}</p>
+                                        <p>{article.category}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p>No state articles for this city available.</p>
+                            )}
+                        </div>
+                    </div>
+                    <div className='global-news-container'>
+                        <h2>Global News</h2>
+                        {randomGlobalArticles.length ? (
+                            randomGlobalArticles.map((article, index) => (
+                                <div key={index} className="article">
+                                    <h3>{article.title}</h3>
+                                    <p>{article.content}</p>
+                                    <p>{article.category}</p>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No global articles available at the moment.</p>
+                        )}
+                    </div>
                 </div>
+            ) : (
+                <p>Select a city</p>
             )}
         </div>
-    )
+    );
 }
 
 export default News;
