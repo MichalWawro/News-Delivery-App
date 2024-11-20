@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import './News.css';
 
-function News({ selectedCity, showLocal, articles, category }) {
+function News({ selectedCity, articles, category }) {
     const [globalArticles, setGlobalArticles] = useState([]);
     const [localArticles, setLocalArticles] = useState([]);
     const [stateArticles, setStateArticles] = useState([]);
@@ -111,7 +111,9 @@ function News({ selectedCity, showLocal, articles, category }) {
                     </div>
                 </div>
             ) : (
-                <p>Select a city</p>
+                <div className="select-city-container">
+                    <h2>Select a city</h2>
+                </div>
             )}
         </div>
     );

@@ -97,7 +97,7 @@ function App() {
         <Categories category={category} setCategory={setCategory}/>
         {
           cities.length > 0 ? (
-            <News selectedCity={selectedCity} showLocal={showLocal} articles={articles} category={category} />
+            <News selectedCity={selectedCity} articles={articles} category={category} />
           ) : (
               <div className='loading-app'>Loading articles{dots}</div>
           )

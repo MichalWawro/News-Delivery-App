@@ -41,17 +41,16 @@
     line-height: 1.6;
 }
 
-
 .local-news-container,
 .state-news-container,
 .global-news-container {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
 }
 
 .us-news-container {
-    width: 70% ;
+    width: 70%;
 }
 
 .global-news-container {
@@ -70,3 +69,9 @@
     padding: 0;
 }
 
+.select-city-container h2 {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
