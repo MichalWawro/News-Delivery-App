@@ -3,14 +3,14 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: #493628;
+    /* color: #493628; */
     gap: 0.5rem;
 }
 
 .switch-icon {
-    background-color: #AB886D;
+    background-color: #7AB2D3;
     border-radius: 15px;
-    padding: 2px;
+    padding: 4px;
     width: 32px;
     height: 32px;
 }
@@ -19,11 +19,12 @@
     display: none;
 }
 
+
 .switch {
     position: relative;
-    width: 50px;
+    width: 52px;
     height: 24px;
-    background-color: #AB886D;
+    background-color: #7AB2D3;
     border-radius: 34px;
     cursor: pointer;
     transition: background-color 0.4s;
@@ -36,11 +37,35 @@
     width: 18px;
     left: 4px;
     bottom: 3px;
-    background-color: #D6C0B3;
+    background-color: #DFF2EB;
     border-radius: 50%;
     transition: transform 0.4s;
 }
 
 input:checked+.slider::before {
     transform: translateX(26px);
+}
+
+.light .switch-icon {
+
+}
+
+.light .switch {
+
+}
+
+.light .slider::before {
+
+}
+
+.dark .switch-icon {
+
+}
+
+.dark .switch {
+
+}
+
+.dark .slider::before {
+
 }

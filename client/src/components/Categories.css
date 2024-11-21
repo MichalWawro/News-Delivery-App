@@ -1,6 +1,6 @@
 .categoriesBar {
     display: flex;
-    background-color: #AB886D;
+
     height: 5vh;
 
     justify-content: space-between;
@@ -14,13 +14,13 @@
     background: transparent;
 
     border: none;
-    border-left: 3px solid #493628;
+    border-left: 3px solid #201E43;
     padding: 10px;
     cursor: pointer;
 
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    color: #493628;
+    color: black;
 }
 
 .categoryButton:hover {
@@ -28,12 +28,44 @@
 }
 
 .categoryButton:last-child {
-    border-right: 3px solid #493628;
+    border-right: 3px solid #201E43;
 }
 
 .categoryButton.active {
-    background-color: #493628;
+    background-color: #201E43;
+    color: white;
+}
 
-    color: #D6C0B3;
+.light .categoriesBar {
+    background-color: #7AB2D3;
+}
+
+.light .categoryButton {
 
 }
+
+.light .categoryButton:last-child {
+
+}
+
+.light .categoryButton.active {
+
+}
+
+.dark .categoriesBar {
+    background-color: #1E2A5E;
+}
+
+.dark .categoryButton {
+
+}
+
+.dark .categoryButton:last-child {
+
+}
+
+.dark .categoryButton.active {
+
+}
+
+

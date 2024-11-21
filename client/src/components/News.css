@@ -1,4 +1,3 @@
-/* #493628  #AB886D #D6C0B3 */
 .news-container {
     width: 65%;
     display: flex;
@@ -10,8 +9,8 @@
 /* //this */
 .article {
     margin: 20px auto;
-    background-color: #AB886D;
-    border: 3px solid #493628;
+    background-color: #7AB2D3;
+    border: 3px solid #134B70;
     border-radius: 10px;
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -26,16 +25,16 @@
 
 .article h3 {
     font-size: 1.4em;
-    color: #333;
+    color: black;
     text-align: center;
     margin: 0;
     padding-bottom: 5px;
-    border-bottom: 2px solid #493628;
+    border-bottom: 2px solid black;
 }
 
 .article p {
     font-size: 1em;
-    color: #493628;
+    color: black;
     text-align: left;
     margin-top: 12px;
     line-height: 1.6;
@@ -63,7 +62,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 3rem;
-    color: #493628;
+    color: black;
 
     margin: 0;
     padding: 0;
@@ -73,5 +72,49 @@
     margin-top: 16px;
     text-align: center;
     font-size: 2rem;
-    color: #333;
+    color: black;
+}
+
+.light .article {
+
+}
+
+.light .article h3 {
+
+}
+
+.light .article p {
+
+}
+
+.light .state-news-container h2,
+.light .local-news-container h2,
+.light .global-news-container h2 {
+
+}
+
+.light .select-city-container h2 {
+
+}
+
+.dark .article {
+
+}
+
+.dark .article h3 {
+
+}
+
+.dark .article p {
+
+}
+
+.dark .state-news-container h2,
+.dark .local-news-container h2,
+.dark .global-news-container h2 {
+
+}
+
+.dark .select-city-container h2 {
+
 }

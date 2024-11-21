@@ -1,6 +1,6 @@
 .current-location-box {
     position: absolute;
-    top: 2.5vh;
+    top: 3vh;
     left: 3%;
 
     min-width: 20%;
@@ -8,7 +8,7 @@
     height: 39px;
     padding-inline: 10px;
 
-    background-color: #AB886D;
+    background-color: #7AB2D3;
     border-radius: 15px;
     border: 0;
     outline: 0;
@@ -23,5 +23,21 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.3rem;
-    color: #D6C0B3;
+    color: #DFF2EB;
+}
+
+.light .current-location-box {
+
+}
+
+.light .current-location-box h1 {
+
+}
+
+.dark .current-location-box {
+
+}
+
+.dark .current-location-box h1 {
+    
 }

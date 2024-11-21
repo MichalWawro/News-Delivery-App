@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import { useTheme } from './ThemeContext';
 import CityInput from './components/CityInput';
 import CurrentLocation from './components/CurrentLocation';
-import LocationSwitch from './components/LocationSwitch';
+import ThemeSwitch from './components/ThemeSwitch';
 import News from './components/News';
 import Categories from './components/Categories';
 
 import './App.css';
 
 function App() {
+  const { theme, setTheme } = useTheme();
   const [selectedCity, setSelectedCity] = useState(null);
-  const [showLocal, setShowLocal] = useState(false);
   const [articles, setArticles] = useState([]);
   const [cities, setCities] = useState([]);
   const [category, setCategory] = useState(null);
   const [dots, setDots] = useState("");
 
+  useEffect(() => {
+    document.body.className = theme ? 'dark-theme' : 'light-theme';
+  }, [theme])
 
   useEffect(() => {
     document.title = 'News Delivery App';
@@ -40,17 +44,17 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-        setDots((prevDots) => {
-            if (prevDots.length < 3) {
-                return prevDots + ".";
-            } else {
-                return "";
-            }
-        });
+      setDots((prevDots) => {
+        if (prevDots.length < 3) {
+          return prevDots + ".";
+        } else {
+          return "";
+        }
+      });
     }, 500);
 
     return () => clearInterval(interval);
-}, []);
+  }, []);
 
   const fetchCticies = () => {
     // fetch('http://98.85.16.27:8080/api/get-cities')
@@ -83,7 +87,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className={`app ${theme ? 'dark' : 'light'}`}>
       <header className="app-header">
         <CurrentLocation selectedCity={selectedCity} />
         {cities.length > 0 ? (
@@ -91,15 +95,15 @@ function App() {
         ) : (
           <div></div>
         )}
-        <LocationSwitch setShowLocal={setShowLocal} />
+        <ThemeSwitch />
       </header>
       <div className="app-container">
-        <Categories category={category} setCategory={setCategory}/>
+        <Categories category={category} setCategory={setCategory} />
         {
           cities.length > 0 ? (
             <News selectedCity={selectedCity} articles={articles} category={category} />
           ) : (
-              <div className='loading-app'>Loading articles{dots}</div>
+            <div className='loading-app'>Loading articles{dots}</div>
           )
         }
 
