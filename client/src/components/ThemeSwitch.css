@@ -3,12 +3,10 @@
     align-items: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    /* color: #493628; */
     gap: 0.5rem;
 }
 
 .switch-icon {
-    background-color: #7AB2D3;
     border-radius: 15px;
     padding: 4px;
     width: 32px;
@@ -24,7 +22,6 @@
     position: relative;
     width: 52px;
     height: 24px;
-    background-color: #7AB2D3;
     border-radius: 34px;
     cursor: pointer;
     transition: background-color 0.4s;
@@ -37,7 +34,6 @@
     width: 18px;
     left: 4px;
     bottom: 3px;
-    background-color: #DFF2EB;
     border-radius: 50%;
     transition: transform 0.4s;
 }
@@ -46,26 +42,29 @@ input:checked+.slider::before {
     transform: translateX(26px);
 }
 
+/* Light styling */
 .light .switch-icon {
-
+    background-color: #FFDBB5;
 }
 
 .light .switch {
-
+    background-color: #FFDBB5;
 }
 
 .light .slider::before {
-
+    background-color: #6C4E31;
 }
 
+/* Dark styling */
 .dark .switch-icon {
-
+    background-color: #7AB2D3;
 }
 
 .dark .switch {
-
+    background-color: #7AB2D3;
 }
 
 .dark .slider::before {
+    background-color: #DFF2EB;
 
 }

@@ -1,18 +1,25 @@
-.current-location-box {
+.current-location-container {
     position: absolute;
     top: 3vh;
-    left: 3%;
-
-    min-width: 20%;
-    max-width: 30%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     height: 39px;
-    padding-inline: 10px;
+}
 
-    background-color: #7AB2D3;
+.state-flag {
+    height: 54px;
+    margin-right: 30px;
+}
+
+.current-location-box {
+    min-width: 75%;
+    height: 39px;
+    padding-inline: 30px;
     border-radius: 15px;
     border: 0;
     outline: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,21 +30,22 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 1.3rem;
-    color: #DFF2EB;
 }
 
+/* Light styling */
 .light .current-location-box {
-
+    background-color: #FFDBB5;
 }
 
 .light .current-location-box h1 {
-
+    color: black;
 }
 
+/* Dark styling */
 .dark .current-location-box {
-
+    background-color: #7AB2D3;
 }
 
 .dark .current-location-box h1 {
-    
+    color: black;
 }

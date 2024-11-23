@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* #493628  #AB886D #D6C0B3 */
-/* #201E43 #134B70 #508C9B #EEEEEE*/
-/* #4A628A #7AB2D3 #B9E5E8 #DFF2EB*/
-/* #F3F3E0 */
-/* #1E2A5E #55679C*/
+/* Light Colors Palette */
+/* #603F26 #6C4E31 #FFDBB5 #FFEAC5 */
+
+/* Dark Colors Palette*/
+/* #201E43 #1E2A5E #7AB2D3 #a7d9f7 */
 .app-header {
-  background-color: #201E43;
   position: sticky;
   top: 0;
   height: 10vh;
@@ -17,11 +16,8 @@
 }
 
 .app-container {
-
   min-height: 90vh;
   height: auto;
-  /* align-items: center; */
-  /* flex-direction: column; */
 }
 
 .loading-app {
@@ -33,19 +29,20 @@
   text-align: center;
 }
 
+/* Light styling */
 .light .app-header {
-
-
+  background-color: #603F26;
 }
 .light .app-container {
-  background-color: #F3F3E0;
+  background-color: #FFDBB5;
 }
 .light .loading-app {
 
 }
 
+/* Dark styling */
 .dark .app-header {
-
+  background-color: #201E43;
 }
 
 .dark .app-container {

@@ -4,18 +4,14 @@
   left: 50%;
   width: 25%;
   top: 3vh;
-
-  background-color: #7AB2D3;
   border-radius: 15px;
   border: 0;
   outline: 0;
   padding: 7px 0;
-
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
-  color: #DFF2EB;
 }
 
 .dropdown-list {
@@ -25,7 +21,6 @@
 
   top: 7.5vh;
   width: 25%;
-  background-color: #7AB2D3;
   padding: 0;
   margin: 0;
   border-radius: 20px;
@@ -34,7 +29,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1.3rem;
-  color: #DFF2EB;
 
   max-height: 250px;
   overflow-y: auto;
@@ -46,23 +40,34 @@
 }
 
 .dropdown-list li:hover {
-  background-color: #DFF2EB;
 }
 
+/* Light styling */
 .light .input-field {
+  background-color: #FFDBB5;
+  color: black
 }
 
 .light .dropdown-list {
+  background-color: #FFDBB5;
+  color: black
 }
 
 .light .dropdown-list li:hover {
+  background-color: #FFEAC5;
 }
 
+/* Dark styling */
 .dark .input-field {
+  background-color: #7AB2D3;
+  color: black
 }
 
 .dark .dropdown-list {
+  background-color: #7AB2D3;
+  color: black
 }
 
 .dark .dropdown-list li:hover {
+  background-color: #a7d9f7;
 }

@@ -1,8 +1,6 @@
 .categoriesBar {
     display: flex;
-
     height: 5vh;
-
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
@@ -12,12 +10,10 @@
 .categoryButton {
     flex: 1;
     background: transparent;
-
     border: none;
-    border-left: 3px solid #201E43;
+    border-left: 3px solid black;
     padding: 10px;
     cursor: pointer;
-
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: black;
@@ -28,44 +24,31 @@
 }
 
 .categoryButton:last-child {
-    border-right: 3px solid #201E43;
+    border-right: 3px solid black;
 }
 
-.categoryButton.active {
-    background-color: #201E43;
-    color: white;
-}
+.categoryButton.active {}
 
+/* Light styling */
 .light .categoriesBar {
-    background-color: #7AB2D3;
+    background-color: #6C4E31;
 }
 
-.light .categoryButton {
-
-}
-
-.light .categoryButton:last-child {
-
-}
+.light .categoryButton {}
 
 .light .categoryButton.active {
+    background-color: #FFDBB5;
 
 }
 
+/* Dark styling */
 .dark .categoriesBar {
     background-color: #1E2A5E;
 }
 
-.dark .categoryButton {
-
-}
-
-.dark .categoryButton:last-child {
-
-}
+.dark .categoryButton {}
 
 .dark .categoryButton.active {
-
+    background-color: #7AB2D3;
+    /* color: black */
 }
-
-
