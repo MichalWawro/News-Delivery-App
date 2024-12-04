@@ -63,7 +63,11 @@ public class ArticleClassifier {
             String location = parts[1].replace("Location: ", "").trim();
             String category = parts[2].replace("Category: ", "").trim();
 
+<<<<<<< HEAD
             return classification + ";" + location + ";" + category;
+=======
+            return  classification + ";" + location + ";" + category;
+>>>>>>> 4666834b (Added String category to Article model, article classifier and article pipeline.)
         } catch (Exception e) {
             e.printStackTrace();
             return "error";

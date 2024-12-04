@@ -27,7 +27,7 @@ public class ArticleController {
     @PostMapping("/get-articles")
     @CrossOrigin(origins = {"http://localhost:3000", "http://98.85.16.27:3000"})
     public ResponseEntity<List<Article>> getArticles(@RequestBody City city) {
-        System.out.println(city.getName() + ", " + city.getState());
+        System.out.println(city.getName() + ", " + city.getState() + ", " + city.getStateId());
         List<Article> articles = articleService.filterArticles(city);
         return ResponseEntity.ok(articles);
     }
