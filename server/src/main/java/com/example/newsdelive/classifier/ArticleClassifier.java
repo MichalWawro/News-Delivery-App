@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class ArticleClassifier {
     private final String OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-    private final String OPENAI_API_KEY = "API_KEY";
+    private final String OPENAI_API_KEY = "OPENAI_API_KEY";
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -21,8 +21,9 @@ public class ArticleClassifier {
                         "Do not use abbreviations\n" +
                         "The output should look like this:\n" +
                         "Classification: Local/Global; " +
-                        "Location: City, State or City\n" +
-                        "\nHere's the article I want you to classify:\n" +
+                        "Location: City, State or City;" +
+                        "Category: Category\n" +
+                        "Here's the article I want you to classify:\n" +
                         "Title of the article: " + article.getTitle() + "\n" +
                         "Content of the article: " + article.getContent();
 
