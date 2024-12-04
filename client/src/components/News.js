@@ -25,13 +25,7 @@ function News({ selectedCity, articles, category }) {
             }
         });
 
-<<<<<<< HEAD
-        console.log(category);
-
-        if(category) {
-=======
         if (category) {
->>>>>>> e901481f (Changed the layout of the articles, added article randomizer for more article diversity, added more categories.)
             global = global.filter(article => article.category === category);
             local = local.filter(article => article.category === category);
             state = state.filter(article => article.category === category);
