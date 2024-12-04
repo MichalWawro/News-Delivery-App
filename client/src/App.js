@@ -25,8 +25,8 @@ function App() {
 
     const checkArticles = async () => {
       try {
-        // const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
-        const response = await fetch('http://localhost:8080/api/check-for-articles');
+        const response = await fetch('http://98.85.16.27:8080/api/check-for-articles');
+        // const response = await fetch('http://localhost:8080/api/check-for-articles');
         const data = await response.json();
         if (data.ready) {
           fetchCticies();
@@ -57,16 +57,16 @@ function App() {
   }, []);
 
   const fetchCticies = () => {
-    // fetch('http://98.85.16.27:8080/api/get-cities')
-    fetch('http://localhost:8080/api/get-cities')
+    fetch('http://98.85.16.27:8080/api/get-cities')
+    // fetch('http://localhost:8080/api/get-cities')
       .then(response => response.json())
       .then(data => setCities(data))
       .catch(error => console.error("Error fetching cities:", error));
   };
 
   const sendCityToBackend = (city) => {
-    // fetch('http://98.85.16.27:8080/api/get-articles', {
-    fetch('http://localhost:8080/api/get-articles', {
+    fetch('http://98.85.16.27:8080/api/get-articles', {
+    // fetch('http://localhost:8080/api/get-articles', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
