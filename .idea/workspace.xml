@@ -126,7 +126,30 @@
 =======
       <workItem from="1731440742498" duration="6953000" />
 >>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+<<<<<<< HEAD
 >>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
+=======
+=======
+      <workItem from="1731440742498" duration="8432000" />
+      <workItem from="1731455482446" duration="6592000" />
+      <workItem from="1731511199812" duration="747000" />
+      <workItem from="1731589887619" duration="5112000" />
+      <workItem from="1731614528746" duration="178000" />
+      <workItem from="1731614716244" duration="287000" />
+<<<<<<< HEAD
+      <workItem from="1731615119712" duration="2038000" />
+>>>>>>> a3d2d8d7 (Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost)
+=======
+      <workItem from="1731615119712" duration="9120000" />
+      <workItem from="1731935872280" duration="1367000" />
+      <workItem from="1732054640734" duration="2868000" />
+      <workItem from="1732191221757" duration="1925000" />
+      <workItem from="1732284634567" duration="4226000" />
+      <workItem from="1732624399910" duration="1207000" />
+      <workItem from="1732647425304" duration="1271000" />
+      <workItem from="1732650502422" duration="457000" />
+>>>>>>> 25be1d18 (Added more articles to the dataset.)
+>>>>>>> d62be02f (Added more articles to the dataset.)
     </task>
     <task id="LOCAL-00001" summary="Changes in the structure of the project">
       <option name="closed" value="true" />
@@ -168,7 +191,161 @@
     </task>
     <option name="localTasksCounter" value="5" />
 >>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+<<<<<<< HEAD
 >>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
+=======
+=======
+    <task id="LOCAL-00005" summary="Added my EC2 public IP to CORS .allowedOrigins">
+      <option name="closed" value="true" />
+      <created>1731452913901</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731452913901</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Testing CORS on all origins allowed">
+      <option name="closed" value="true" />
+      <created>1731454737955</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731454737955</updated>
+    </task>
+    <task id="LOCAL-00007" summary="CORS related bug fixes">
+      <option name="closed" value="true" />
+      <created>1731456212677</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731456212677</updated>
+    </task>
+    <task id="LOCAL-00008" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731457112365</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731457112365</updated>
+    </task>
+    <task id="LOCAL-00009" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731459236585</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731459236585</updated>
+    </task>
+    <task id="LOCAL-00010" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731460717608</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731460717608</updated>
+    </task>
+    <task id="LOCAL-00011" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731460733244</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731460733244</updated>
+    </task>
+    <task id="LOCAL-00012" summary="CORS update.">
+      <option name="closed" value="true" />
+      <created>1731462537514</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731462537514</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Deleted API_KEY from the code">
+      <option name="closed" value="true" />
+      <created>1731511300354</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731511300354</updated>
+    </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="14" />
+>>>>>>> a3d2d8d7 (Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost)
+=======
+    <task id="LOCAL-00014" summary="Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost">
+      <option name="closed" value="true" />
+      <created>1731626754269</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731626754269</updated>
+    </task>
+    <task id="LOCAL-00015" summary="API Key for EC2">
+      <option name="closed" value="true" />
+      <created>1731627111845</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627111845</updated>
+    </task>
+    <task id="LOCAL-00016" summary="API Key for EC2">
+      <option name="closed" value="true" />
+      <created>1731627156759</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627156759</updated>
+    </task>
+    <task id="LOCAL-00017" summary="API Key for EC2">
+      <option name="closed" value="true" />
+      <created>1731627795099</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731627795099</updated>
+    </task>
+    <task id="LOCAL-00018" summary="pom file updated">
+      <option name="closed" value="true" />
+      <created>1731629210778</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731629210778</updated>
+    </task>
+    <task id="LOCAL-00019" summary="CORS Update">
+      <option name="closed" value="true" />
+      <created>1731630431602</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731630431602</updated>
+    </task>
+    <task id="LOCAL-00020" summary="API KEY Hidden, Localhost application setup">
+      <option name="closed" value="true" />
+      <created>1731633993447</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1731633993447</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added stateId as a String to the City model">
+      <option name="closed" value="true" />
+      <created>1732321306675</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732321306675</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added stateId as a String to the City model, Application set for public hosting">
+      <option name="closed" value="true" />
+      <created>1732321755608</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732321755608</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+>>>>>>> 25be1d18 (Added more articles to the dataset.)
+>>>>>>> d62be02f (Added more articles to the dataset.)
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +364,28 @@
     <MESSAGE value="EC2 Server ready" />
     <option name="LAST_COMMIT_MESSAGE" value="EC2 Server ready" />
 >>>>>>> 0a69bf18 (Added my EC2 public IP to CORS .allowedOrigins)
+<<<<<<< HEAD
 >>>>>>> c33cf6a6 (Added my EC2 public IP to CORS .allowedOrigins)
+=======
+=======
+    <MESSAGE value="Added my EC2 public IP to CORS .allowedOrigins" />
+    <MESSAGE value="Testing CORS on all origins allowed" />
+    <MESSAGE value="CORS related bug fixes" />
+    <MESSAGE value="CORS update." />
+    <MESSAGE value="Deleted API_KEY from the code" />
+<<<<<<< HEAD
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted API_KEY from the code" />
+>>>>>>> a3d2d8d7 (Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost)
+=======
+    <MESSAGE value="Updated AI prompt for article category detection; Added test-sized articles-test.csv file for testing; Application set for localhost" />
+    <MESSAGE value="API Key for EC2" />
+    <MESSAGE value="pom file updated" />
+    <MESSAGE value="CORS Update" />
+    <MESSAGE value="API KEY Hidden, Localhost application setup" />
+    <MESSAGE value="Added stateId as a String to the City model" />
+    <MESSAGE value="Added stateId as a String to the City model, Application set for public hosting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added stateId as a String to the City model, Application set for public hosting" />
+>>>>>>> 25be1d18 (Added more articles to the dataset.)
+>>>>>>> d62be02f (Added more articles to the dataset.)
   </component>
 </project>
