@@ -1,4 +1,4 @@
-package com.example.newsdelive.model;
+package com.example.newsdeliveryapp.model;
 
 public class Article {
     private String title;
@@ -6,13 +6,15 @@ public class Article {
     private String location;
     private String city;
     private String state;
+    private String category;
 
-    public Article(String title, String content, String location, String city, String state) {
+    public Article(String title, String content, String location, String city, String state, String category) {
         this.title = title;
         this.content = content;
         this.location = location;
         this.city = city;
         this.state = state;
+        this.category = category;
     }
 
     public String getTitle() {
@@ -53,5 +55,13 @@ public class Article {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

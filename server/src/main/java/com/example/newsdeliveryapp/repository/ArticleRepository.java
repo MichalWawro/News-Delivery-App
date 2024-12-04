@@ -1,6 +1,6 @@
-package com.example.newsdelive.repository;
+package com.example.newsdeliveryapp.repository;
 
-import com.example.newsdelive.model.Article;
+import com.example.newsdeliveryapp.model.Article;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,8 +1,8 @@
-package com.example.newsdelive.pipeline;
+package com.example.newsdeliveryapp.pipeline;
 
-import com.example.newsdelive.classifier.ArticleClassifier;
-import com.example.newsdelive.loader.ArticleLoader;
-import com.example.newsdelive.model.Article;
+import com.example.newsdeliveryapp.classifier.ArticleClassifier;
+import com.example.newsdeliveryapp.loader.ArticleLoader;
+import com.example.newsdeliveryapp.model.Article;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
@@ -30,6 +30,7 @@ public class ArticlePipeline {
             } else {
                 article.setLocation("Global");
             }
+            article.setCategory(parts[2]);
         }
         return articles;
     }

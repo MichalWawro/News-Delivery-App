@@ -1,10 +1,9 @@
-package com.example.newsdelive.controller;
+package com.example.newsdeliveryapp.controller;
 
-import com.example.newsdelive.model.Article;
-import com.example.newsdelive.model.City;
-import com.example.newsdelive.pipeline.ArticlePipeline;
-import com.example.newsdelive.repository.ArticleRepository;
-import com.example.newsdelive.service.ArticleService;
+import com.example.newsdeliveryapp.model.Article;
+import com.example.newsdeliveryapp.model.City;
+import com.example.newsdeliveryapp.repository.ArticleRepository;
+import com.example.newsdeliveryapp.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

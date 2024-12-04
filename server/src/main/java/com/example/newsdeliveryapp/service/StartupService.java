@@ -1,8 +1,8 @@
-package com.example.newsdelive.service;
+package com.example.newsdeliveryapp.service;
 
-import com.example.newsdelive.model.Article;
-import com.example.newsdelive.pipeline.ArticlePipeline;
-import com.example.newsdelive.repository.ArticleRepository;
+import com.example.newsdeliveryapp.model.Article;
+import com.example.newsdeliveryapp.pipeline.ArticlePipeline;
+import com.example.newsdeliveryapp.repository.ArticleRepository;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import jakarta.annotation.PostConstruct;

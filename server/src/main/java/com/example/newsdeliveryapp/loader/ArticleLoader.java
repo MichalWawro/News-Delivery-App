@@ -1,6 +1,6 @@
-package com.example.newsdelive.loader;
+package com.example.newsdeliveryapp.loader;
 
-import com.example.newsdelive.model.Article;
+import com.example.newsdeliveryapp.model.Article;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVParserBuilder;
