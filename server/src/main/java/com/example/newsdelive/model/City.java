@@ -3,10 +3,12 @@ package com.example.newsdelive.model;
 public class City {
     private String name;
     private String state;
+    private String stateId;
 
-    public City(String name, String state) {
+    public City(String name, String state, String stateId) {
         this.name = name;
         this.state = state;
+        this.stateId = stateId;
     }
 
     public String getName() {
@@ -23,5 +25,13 @@ public class City {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getStateId() {
+        return stateId;
+    }
+
+    public void setStateId(String stateId) {
+        this.stateId = stateId;
     }
 }

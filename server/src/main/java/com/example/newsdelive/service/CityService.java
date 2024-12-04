@@ -27,7 +27,8 @@ public class CityService {
             while ((line = csvReader.readNext()) != null) {
                 String name = line[0];
                 String state = line[3];
-                cities.add(new City(name, state));
+                String stateId = line[2];
+                cities.add(new City(name, state, stateId));
             }
 
             csvReader.close();
