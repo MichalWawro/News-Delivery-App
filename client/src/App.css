@@ -25,7 +25,6 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  color: #7AB2D3;
   text-align: center;
 }
 
@@ -37,7 +36,7 @@
   background-color: #FFDBB5;
 }
 .light .loading-app {
-
+  color: #603F26;
 }
 
 /* Dark styling */
@@ -50,5 +49,5 @@
 }
 
 .dark .loading-app {
-
+  color: #7AB2D3;
 }
