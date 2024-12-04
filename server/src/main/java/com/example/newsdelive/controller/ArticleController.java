@@ -26,6 +26,7 @@ public class ArticleController {
     }
 
     @PostMapping("/get-articles")
+    @CrossOrigin(origins = "http://98.85.16.27:3000")
     public ResponseEntity<List<Article>> getArticles(@RequestBody City city) {
         System.out.println(city.getName() + ", " + city.getState());
         List<Article> articles = articleService.filterArticles(city);
@@ -33,7 +34,7 @@ public class ArticleController {
     }
 
     @GetMapping("/check-for-articles")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://98.85.16.27:3000")
     public Map<String, Boolean> checkForArticles() {
         boolean hasArticles = repository.getAllArticles().size() > 0;
         return Collections.singletonMap("ready", hasArticles);
